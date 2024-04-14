@@ -14,7 +14,9 @@ export default {
 
       if (!message.guildId) return message.reply("no guild");
 
-      const guildRegister = db.collection("GARBAGE").doc("TEST");
+      const guildRegister = db
+        .collection("GARBAGE")
+        .doc("XCpRvYX4bo6axbMV5SDM");
 
       const getGuild = await guildRegister.get();
 

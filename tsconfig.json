@@ -16,7 +16,8 @@
       "@helper/*": ["./helper/*"],
       "@utils/*": ["./utils/*"],
       "@firebase/*": ["./firebase/*"],
-      "@type": ["./type.d.ts"]
+      "@type": ["./type.d.ts"],
+      "@serviceAccount": ["./serviceAccount.json"]
     },
 
     /* Linting */

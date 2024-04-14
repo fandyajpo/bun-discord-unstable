@@ -1,3 +1,4 @@
+import type { Command } from "@type";
 import { Client, Collection } from "discord.js";
 import { readdir } from "fs/promises";
 import path from "path";
@@ -12,7 +13,7 @@ export async function loadCommands(client: Client) {
     if (!file.endsWith(".ts")) continue;
     const filePath = path.join(commandsPath, file);
     const command = await import(filePath);
-    const cmd = command.default;
+    const cmd: Command = command.default;
     console.log(`[COMMANDS] ${cmd.name}`);
     client.commands.set(cmd.name, cmd);
 
